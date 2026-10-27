@@ -1,1151 +1,248 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="color-scheme" content="light" />
-    <meta name="description" content="Prestige Store — متجر الاشتراكات الرقمية: ذكاء اصطناعي وبث وموسيقى وتصميم وإنتاجية، بأسعار واضحة بـ USDT وتسليم فوري عبر بوت تيليغرام." />
-    <link rel="icon" href="data:," />
-    <title>Prestige Store — متجر الاشتراكات الرقمية</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <style>
-      :root {
-        color-scheme: light;
-        --red: #f0442e;
-        --red-dark: #d92d20;
-        --red-deep: #b42318;
-        --red-soft: #fff2f0;
-        --bg: #ffffff;
-        --bg-soft: #faf8f6;
-        --surface: #ffffff;
-        --line: #eee9e4;
-        --line-strong: #ddd5cc;
-        --ink: #1c1917;
-        --soft: #4c463f;
-        --muted: #7d766b;
-        --faint: #a89f92;
-        --green: #0e9f6e;
-        --shadow-card: 0 14px 34px -18px rgba(28, 25, 23, 0.28);
-      }
-      * { box-sizing: border-box; }
-      html { scroll-behavior: smooth; }
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--ink);
-        font-family: "IBM Plex Sans Arabic", system-ui, sans-serif;
-        font-size: 16.5px;
-        line-height: 1.75;
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
-      }
-      img { max-width: 100%; display: block; }
-      a { color: var(--red-dark); }
-      .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
-      .latin { letter-spacing: -0.01em; }
-      h1, h2, h3 { margin: 0; line-height: 1.4; }
-      body.locked { overflow: hidden; }
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Prestige Store — متجر الاشتراكات الرقمية: ذكاء اصطناعي وبث وموسيقى وتصميم وإنتاجية، بأسعار واضحة بـ USDT وتسليم فوري عبر بوت تيليغرام." />
+<title>Prestige Store — متجر الاشتراكات الرقمية</title>
+<!-- Design inspired by the MIT-licensed AI landing template "stunning-ia-lp" (c) 2024 Pedro Estevão; rebuilt here as a single static page (no framework, no build step) for GitHub Pages. -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#070312;--bg2:#0d0621;--violet:#8c45ff;--violet2:#b894ff;--cyan:#38e1ff;--text:#f4f1ff;--muted:rgba(244,241,255,.68);--faint:rgba(244,241,255,.45);--glass:rgba(255,255,255,.055);--stroke:rgba(255,255,255,.12);--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(7,3,18,.72);border-bottom:1px solid var(--stroke)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.3px}
+.logo span{background:linear-gradient(90deg,#fff,var(--violet2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;text-decoration:none;border:1px solid transparent;transition:.2s}
+.btn-primary{background:linear-gradient(135deg,#a855f7,#6d28d9);color:#fff;box-shadow:0 8px 30px rgba(140,69,255,.45)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(140,69,255,.6)}
+.btn-ghost{border-color:var(--stroke);background:var(--glass)}
+/* ---------- hero (stunning-ia-lp style: starfield + orbit rings + radial glow) ---------- */
+.hero{position:relative;padding:86px 0 64px;text-align:center;overflow:hidden;
+  -webkit-mask-image:linear-gradient(to bottom,transparent,black 8%,black 92%,transparent);
+  mask-image:linear-gradient(to bottom,transparent,black 8%,black 92%,transparent)}
+.stars{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 20% 30%,#fff,transparent),radial-gradient(1.5px 1.5px at 70% 20%,#fff,transparent),radial-gradient(1px 1px at 40% 70%,#fff,transparent),radial-gradient(1.5px 1.5px at 85% 60%,#fff,transparent),radial-gradient(1px 1px at 10% 80%,#fff,transparent),radial-gradient(1px 1px at 55% 15%,#fff,transparent);opacity:.55;animation:drift 120s linear infinite}
+@keyframes drift{from{background-position:0 0}to{background-position:1200px 0}}
+.glow{position:absolute;inset:0;background:radial-gradient(75% 75% at center center,rgba(140,69,255,.5) 15%,rgba(14,0,36,.5) 78%,transparent)}
+.orb{position:absolute;top:50%;left:50%;border:1px dashed rgba(255,255,255,.22);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none}
+.orb1{width:340px;height:340px;animation:spin 60s linear infinite}
+.orb2{width:470px;height:470px;animation:spinrev 90s linear infinite}
+.orb3{width:600px;height:600px;opacity:.5}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes spinrev{to{transform:translate(-50%,-50%) rotate(-360deg)}}
+.orb-core{position:absolute;top:50%;left:50%;width:150px;height:150px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(50% 50% at 30% 25%,#fff,var(--violet2) 38%,#180042);box-shadow:-20px -20px 50px rgba(255,255,255,.4),0 0 60px var(--violet);opacity:.9}
+.hero-in{position:relative}
+.badge{display:inline-block;padding:7px 16px;border-radius:999px;border:1px solid var(--stroke);background:var(--glass);font-size:14px;color:var(--muted)}
+.hero h1{font-size:clamp(52px,9vw,110px);line-height:1.05;margin:22px 0 8px;font-weight:800;letter-spacing:-2px;background:radial-gradient(100% 100% at top left,#fff,rgba(140,69,255,.75));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:640px;margin:0 auto 26px;line-height:1.8}
+.hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.stats{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:44px}
+.stat{border:1px solid var(--stroke);background:var(--glass);border-radius:16px;padding:14px 20px;min-width:150px}
+.stat b{display:block;font-size:22px}.stat span{color:var(--muted);font-size:13px}
+/* ---------- ticker ---------- */
+.ticker{overflow:hidden;border-block:1px solid var(--stroke);padding:13px 0;white-space:nowrap;background:rgba(255,255,255,.02)}
+.ticker span{display:inline-block;animation:tick 32s linear infinite;padding-left:40px;color:var(--muted);font-weight:600}
+@keyframes tick{to{transform:translateX(50%)}}
+/* ---------- sections ---------- */
+section{padding:64px 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 34px}
+.sec-head h2{font-size:clamp(28px,4vw,42px);margin:0 0 10px}
+.sec-head p{color:var(--muted);line-height:1.8;margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid var(--stroke);border-radius:var(--radius);overflow:hidden;cursor:pointer;transition:.25s;text-align:right}
+.card:hover{transform:translateY(-6px);border-color:rgba(184,148,255,.55);box-shadow:0 20px 50px rgba(140,69,255,.28)}
+.card img{width:100%;height:158px;object-fit:cover;display:block;background:#160b33}
+.card-body{padding:18px}
+.card-body h3{margin:0 0 6px;font-size:18px}
+.card-body p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.7;min-height:50px}
+.foot{display:flex;align-items:center;justify-content:space-between;margin-top:14px}
+.price small{display:block;color:var(--faint);font-size:12px}
+.amount{font-size:26px;font-weight:800;color:#fff}
+.amount i{font-style:normal;font-size:13px;color:var(--violet2);font-weight:700}
+.details{color:var(--violet2);font-weight:700;font-size:14px}
+/* ---------- steps / payments / referral / faq ---------- */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.step{border:1px solid var(--stroke);background:var(--glass);border-radius:var(--radius);padding:22px}
+.step b.num{display:inline-block;width:38px;height:38px;line-height:38px;text-align:center;border-radius:50%;background:linear-gradient(135deg,#a855f7,#6d28d9);font-size:18px}
+.step h3{margin:14px 0 6px}.step p{color:var(--muted);line-height:1.7;margin:0;font-size:15px}
+.paygrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.pay{border:1px solid var(--stroke);background:var(--glass);border-radius:var(--radius);padding:22px}
+.pay h3{margin:0 0 8px}.pay p{color:var(--muted);line-height:1.7;margin:0;font-size:15px}
+.note{margin-top:16px;border:1px solid rgba(184,148,255,.4);background:rgba(140,69,255,.12);border-radius:16px;padding:16px 20px;line-height:1.8}
+.ref{display:flex;gap:22px;align-items:center;flex-wrap:wrap;border:1px solid var(--stroke);background:linear-gradient(135deg,rgba(140,69,255,.22),rgba(56,225,255,.08));border-radius:26px;padding:30px}
+.ref .big{font-size:56px;font-weight:800}
+.faq-item{border:1px solid var(--stroke);background:var(--glass);border-radius:16px;margin-bottom:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:0;color:var(--text);font:inherit;font-weight:700;padding:18px 20px;text-align:right;cursor:pointer;display:flex;justify-content:space-between}
+.faq-a{display:none;padding:0 20px 18px;color:var(--muted);line-height:1.9}
+.faq-item.open .faq-a{display:block}
+.final{text-align:center;background:radial-gradient(60% 100% at center,rgba(140,69,255,.35),transparent);border-radius:30px;padding:52px 20px}
+footer{border-top:1px solid var(--stroke);padding:26px 0;color:var(--faint);font-size:13.5px;line-height:1.9;text-align:center}
+/* ---------- modal ---------- */
+.backdrop{position:fixed;inset:0;background:rgba(3,0,12,.78);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:100;padding:16px}
+.backdrop.open{display:flex}
+.modal{background:#120826;border:1px solid var(--stroke);border-radius:24px;max-width:560px;width:100%;max-height:88vh;overflow:auto;padding:26px}
+.modal img{width:100%;height:200px;object-fit:cover;border-radius:16px;background:#160b33}
+.modal h3{margin:16px 0 8px;font-size:22px}
+.modal p{color:var(--muted);line-height:1.9;white-space:pre-line}
+.close{float:left;background:var(--glass);border:1px solid var(--stroke);color:#fff;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:18px}
+.rv{opacity:0;transform:translateY(18px);transition:.6s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:640px){.orb-core{width:110px;height:110px}.hero{padding:64px 0 48px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <div class="logo">Prestige <span>Store</span></div>
+  <a class="btn btn-primary" href="https://t.me/prestige_Digital_bot">اطلب عبر البوت</a>
+</div></header>
 
-      /* ---------- buttons ---------- */
-      .btn {
-        display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-        text-decoration: none; font-weight: 600; font-size: 15px;
-        padding: 11px 24px; border-radius: 999px;
-        background: var(--red); color: #fff;
-        border: 1px solid var(--red);
-        transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
-        white-space: nowrap; cursor: pointer; font-family: inherit;
-      }
-      .btn:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 12px 22px -12px rgba(217, 45, 32, 0.6); }
-      .btn:active { transform: translateY(0); box-shadow: none; }
-      .btn-sm { padding: 8px 18px; font-size: 14px; }
-      .btn-white { background: #fff; color: var(--red-deep); border-color: #fff; }
-      .btn-white:hover { background: var(--red-soft); box-shadow: 0 12px 22px -12px rgba(0, 0, 0, 0.35); }
-
-      /* ---------- header ---------- */
-      .topbar {
-        position: sticky; top: 0; z-index: 60;
-        background: rgba(255, 255, 255, 0.92);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-        border-bottom: 1px solid var(--line);
-      }
-      .topbar-in { display: flex; align-items: center; justify-content: space-between; gap: 14px; height: 64px; }
-      .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
-      .brand-mark {
-        width: 34px; height: 34px; flex: none;
-        display: grid; place-items: center;
-        border-radius: 11px;
-        background: var(--red); color: #fff;
-        font-weight: 700; font-size: 17px;
-        box-shadow: 0 8px 16px -8px rgba(217, 45, 32, 0.7);
-      }
-      .brand-name { font-weight: 700; font-size: 17px; }
-      .brand-name small { display: block; font-size: 11px; font-weight: 500; color: var(--muted); line-height: 1.2; letter-spacing: 0; }
-      .nav { display: flex; align-items: center; gap: 26px; }
-      .nav a:not(.btn) { text-decoration: none; font-size: 14.5px; font-weight: 500; color: var(--soft); transition: color 0.15s ease; }
-      .nav a:not(.btn):hover { color: var(--red-dark); }
-      @media (max-width: 820px) { .nav a:not(.btn) { display: none; } }
-
-      /* ---------- hero band ---------- */
-      .hero {
-        position: relative; overflow: hidden;
-        background: linear-gradient(120deg, #e8321e 0%, #f0442e 55%, #f4562f 100%);
-        color: #fff;
-      }
-      .hero::before, .hero::after {
-        content: ""; position: absolute; border-radius: 50%;
-        background: rgba(255, 255, 255, 0.09); pointer-events: none;
-      }
-      .hero::before { width: 460px; height: 460px; top: -230px; inset-inline-start: -120px; }
-      .hero::after { width: 340px; height: 340px; bottom: -190px; inset-inline-end: 6%; background: rgba(255, 255, 255, 0.07); }
-      .hero-in { position: relative; z-index: 1; text-align: center; padding: 54px 0 46px; }
-      .hero h1 { font-size: clamp(30px, 5.4vw, 48px); font-weight: 700; line-height: 1.45; max-width: 780px; margin: 0 auto; }
-      .hero h1 .hl { background: rgba(255, 255, 255, 0.16); border-radius: 10px; padding: 0 12px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-      .hero p.lead { max-width: 620px; margin: 16px auto 0; font-size: clamp(15px, 2.2vw, 17.5px); font-weight: 400; color: rgba(255, 255, 255, 0.88); }
-      .hero-feats { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 30px; margin-top: 26px; font-size: 14px; font-weight: 500; }
-      .hero-feats span { display: inline-flex; align-items: center; gap: 7px; }
-      .hero-feats svg { flex: none; }
-
-      /* ---------- category tabs ---------- */
-      .tabsbar {
-        position: sticky; top: 64px; z-index: 55;
-        background: rgba(255, 255, 255, 0.94);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-        border-bottom: 1px solid var(--line);
-      }
-      .tabs { display: flex; gap: 8px; overflow-x: auto; padding: 12px 0; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
-      .tabs::-webkit-scrollbar { display: none; }
-      .tab {
-        font-family: inherit; cursor: pointer; flex: none;
-        display: inline-flex; align-items: center; gap: 8px;
-        font-size: 14.5px; font-weight: 500; color: var(--soft);
-        padding: 9px 18px; border-radius: 999px;
-        background: var(--bg-soft); border: 1px solid var(--line);
-        transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
-      }
-      .tab svg { color: var(--muted); transition: color 0.15s ease; }
-      .tab:hover { border-color: var(--red); color: var(--red-dark); transform: translateY(-1px); }
-      .tab:hover svg { color: var(--red); }
-      .tab.active { background: var(--red); border-color: var(--red); color: #fff; font-weight: 600; box-shadow: 0 10px 18px -10px rgba(217, 45, 32, 0.65); }
-      .tab.active svg { color: #fff; }
-      @media (max-width: 700px) { .tabs { flex-wrap: wrap; overflow-x: visible; } .tab { flex: 1 1 auto; justify-content: center; padding: 9px 10px; } }
-
-      /* ---------- sections ---------- */
-      section { padding: 64px 0; }
-      .sec-head { max-width: 640px; margin: 0 0 34px; }
-      .sec-head h2 { font-size: clamp(25px, 3.6vw, 34px); font-weight: 700; }
-      .sec-head p { color: var(--muted); margin: 8px 0 0; font-weight: 300; }
-      .soft-bg { background: var(--bg-soft); }
-
-      /* ---------- product grid ---------- */
-      .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-      @media (max-width: 980px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-      @media (max-width: 600px) { .grid { grid-template-columns: 1fr; gap: 16px; } }
-      .card {
-        position: relative;
-        background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
-        overflow: hidden; display: flex; flex-direction: column; cursor: pointer;
-        transition: border-color 0.18s ease, transform 0.28s cubic-bezier(0.22, 0.61, 0.21, 1), box-shadow 0.28s ease;
-      }
-      .card:hover, .card:focus-visible { border-color: var(--red); transform: translateY(-5px); box-shadow: var(--shadow-card); outline: none; }
-      .card.hidden { display: none; }
-      .card .ph-wrap { position: relative; background: var(--bg-soft); }
-      .card img.ph { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
-      .badge-featured {
-        position: absolute; top: 12px; inset-inline-start: 12px;
-        background: var(--red); color: #fff;
-        font-size: 12px; font-weight: 600;
-        padding: 4px 12px; border-radius: 999px;
-        box-shadow: 0 8px 16px -8px rgba(217, 45, 32, 0.8);
-      }
-      .card-body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
-      .card h3 { font-size: 18px; font-weight: 700; line-height: 1.55; }
-      .card .desc { color: var(--muted); font-size: 14px; margin: 5px 0 0; flex: 1; font-weight: 300; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-      .card-foot { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-top: 18px; padding-top: 15px; border-top: 1px dashed var(--line-strong); }
-      .price { line-height: 1.15; }
-      .price small { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-bottom: 3px; }
-      .price .amount { font-size: 27px; font-weight: 700; color: var(--red-dark); letter-spacing: -0.01em; white-space: nowrap; }
-      .price .amount .cur { font-size: 13.5px; font-weight: 600; color: var(--red); }
-      .details-link { font-weight: 600; font-size: 14px; color: var(--red-dark); white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; padding-bottom: 4px; }
-      .details-link svg { transition: transform 0.2s ease; }
-      .card:hover .details-link svg { transform: translateX(-3px); }
-      .browse-note { color: var(--muted); margin-top: 32px; font-size: 15px; font-weight: 300; }
-      .browse-note a { font-weight: 600; }
-
-      /* ---------- how it works strip ---------- */
-      .how-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-      @media (max-width: 980px) { .how-grid { grid-template-columns: repeat(2, 1fr); } }
-      @media (max-width: 560px) { .how-grid { grid-template-columns: 1fr; } }
-      .how-step {
-        background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px;
-      }
-      .how-step .num {
-        width: 34px; height: 34px; border-radius: 50%;
-        background: var(--red-soft); color: var(--red-dark);
-        display: grid; place-items: center; font-weight: 700; font-size: 15px;
-      }
-      .how-step h3 { font-size: 16.5px; font-weight: 600; margin-top: 13px; }
-      .how-step p { color: var(--muted); font-size: 14px; margin: 5px 0 0; font-weight: 300; }
-
-      /* ---------- referral ---------- */
-      .split { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 56px; align-items: start; }
-      @media (max-width: 860px) { .split { grid-template-columns: 1fr; gap: 42px; } }
-      .ref-card { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
-      .ref-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: center 30%; }
-      .ref-body { padding: 26px 28px 28px; }
-      .ref-big { font-size: 52px; font-weight: 700; letter-spacing: -0.02em; line-height: 1; color: var(--red-dark); }
-      .ref-body h3 { font-size: 21px; font-weight: 700; margin-top: 12px; }
-      .ref-body p { color: var(--muted); font-size: 15px; margin: 8px 0 0; font-weight: 300; }
-      .ref-body p strong { color: var(--ink); font-weight: 600; }
-
-      /* ---------- payments ---------- */
-      .pay-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-      @media (max-width: 760px) { .pay-grid { grid-template-columns: 1fr; } }
-      .pay {
-        display: flex; gap: 16px; align-items: flex-start;
-        background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px;
-      }
-      .pay .ic { width: 42px; height: 42px; flex: none; border-radius: 12px; display: grid; place-items: center; background: var(--red-soft); color: var(--red-dark); }
-      .pay h3 { font-size: 16.5px; font-weight: 600; }
-      .pay p { color: var(--muted); font-size: 14.5px; margin: 3px 0 0; font-weight: 300; }
-      .auto { font-size: 11px; font-weight: 600; color: var(--green); background: #e7f8f1; border-radius: 999px; padding: 2px 10px; margin-inline-start: 8px; vertical-align: 2px; white-space: nowrap; }
-      .pay-note { margin-top: 18px; color: var(--muted); font-size: 14.5px; font-weight: 300; }
-      .pay-note strong { color: var(--ink); font-weight: 600; }
-
-      /* ---------- faq ---------- */
-      .faq-item { border-bottom: 1px solid var(--line); }
-      .faq-item:first-of-type { border-top: 1px solid var(--line); }
-      .faq-q {
-        width: 100%; font-family: inherit; background: none; border: none; cursor: pointer;
-        display: flex; justify-content: space-between; align-items: center; gap: 14px;
-        padding: 19px 2px; text-align: start; color: var(--ink);
-        font-size: 16.5px; font-weight: 600;
-      }
-      .faq-q .chev { color: var(--faint); flex: none; transition: transform 0.2s ease; }
-      .faq-item.open .chev { transform: rotate(180deg); }
-      .faq-a { display: none; padding: 0 2px 22px; color: var(--muted); font-size: 15px; max-width: 58ch; font-weight: 300; }
-      .faq-item.open .faq-a { display: block; }
-
-      /* ---------- final cta ---------- */
-      .final-band {
-        border-radius: 22px; text-align: center; color: #fff;
-        background: linear-gradient(120deg, #e8321e, #f4562f);
-        padding: 52px 28px;
-      }
-      .final-band h2 { font-size: clamp(24px, 3.6vw, 33px); font-weight: 700; }
-      .final-band p { color: rgba(255, 255, 255, 0.88); margin: 10px auto 0; max-width: 460px; font-weight: 300; }
-      .final-band .btn { margin-top: 24px; }
-
-      /* ---------- footer ---------- */
-      footer { border-top: 1px solid var(--line); padding: 42px 0 36px; margin-top: 72px; background: var(--bg-soft); }
-      .foot-in { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center; }
-      .foot-links { display: flex; flex-wrap: wrap; gap: 10px 26px; }
-      .foot-links a { text-decoration: none; font-size: 14.5px; font-weight: 500; color: var(--soft); }
-      .foot-links a:hover { color: var(--red-dark); }
-      .foot-note { color: var(--faint); font-size: 13.5px; margin-top: 26px; font-weight: 300; }
-
-      /* ---------- product detail modal ---------- */
-      .modal-backdrop {
-        position: fixed; inset: 0; z-index: 100;
-        background: rgba(24, 16, 12, 0.55);
-        backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
-        display: none; align-items: flex-end; justify-content: center;
-      }
-      .modal-backdrop.open { display: flex; animation: fadeIn 0.22s ease both; }
-      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-      .modal {
-        background: #fff; width: 100%; max-width: 680px; max-height: 92dvh;
-        border-radius: 24px 24px 0 0; overflow-y: auto; overscroll-behavior: contain;
-        animation: sheetUp 0.34s cubic-bezier(0.22, 0.61, 0.21, 1) both;
-      }
-      @keyframes sheetUp { from { transform: translateY(46px); opacity: 0.4; } to { transform: translateY(0); opacity: 1; } }
-      @media (min-width: 720px) {
-        .modal-backdrop { align-items: center; padding: 24px; }
-        .modal { border-radius: 24px; }
-      }
-      .modal-hero { position: relative; }
-      .modal-hero img { width: 100%; aspect-ratio: 16 / 8; object-fit: cover; }
-      .modal-close {
-        position: absolute; top: 14px; inset-inline-end: 14px;
-        width: 38px; height: 38px; border-radius: 50%; border: none; cursor: pointer;
-        background: rgba(255, 255, 255, 0.92); color: var(--ink);
-        display: grid; place-items: center;
-        box-shadow: 0 8px 18px -8px rgba(0, 0, 0, 0.45);
-        transition: transform 0.15s ease;
-      }
-      .modal-close:hover { transform: scale(1.07); }
-      .modal-body { padding: 24px 26px 8px; }
-      .modal-cat { font-size: 12.5px; font-weight: 600; color: var(--red-dark); background: var(--red-soft); display: inline-block; padding: 3px 12px; border-radius: 999px; }
-      .modal-body h2 { font-size: 25px; font-weight: 700; margin-top: 12px; line-height: 1.5; }
-      .modal-price { display: flex; align-items: baseline; gap: 10px; margin-top: 10px; }
-      .modal-price .amount { font-size: 36px; font-weight: 700; color: var(--red-dark); letter-spacing: -0.01em; line-height: 1.1; }
-      .modal-price .amount .cur { font-size: 16px; font-weight: 600; color: var(--red); }
-      .modal-price .period { color: var(--muted); font-size: 14px; }
-      .modal-desc { color: var(--soft); font-size: 15.5px; margin: 14px 0 0; font-weight: 300; }
-      .feat-list { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 9px; }
-      .feat-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; color: var(--soft); }
-      .feat-list svg { color: var(--green); flex: none; margin-top: 5px; }
-      .modal h4 { font-size: 17px; font-weight: 700; margin: 28px 0 14px; }
-      .buy-steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-      @media (max-width: 520px) { .buy-steps { grid-template-columns: 1fr; } }
-      .buy-step { display: flex; gap: 12px; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
-      .buy-step .num { width: 28px; height: 28px; flex: none; border-radius: 50%; background: var(--red); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 13.5px; }
-      .buy-step h5 { margin: 1px 0 2px; font-size: 14.5px; font-weight: 600; }
-      .buy-step p { margin: 0; font-size: 13.5px; color: var(--muted); font-weight: 300; line-height: 1.65; }
-      .assure { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-      @media (max-width: 520px) { .assure { grid-template-columns: 1fr; } }
-      .assure-box { border: 1px solid var(--line); border-radius: 14px; padding: 15px 17px; }
-      .assure-box h5 { margin: 0 0 4px; font-size: 14.5px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
-      .assure-box h5 svg { color: var(--red-dark); }
-      .assure-box p { margin: 0; font-size: 13.5px; color: var(--muted); font-weight: 300; line-height: 1.7; }
-      .modal-note { margin-top: 14px; background: #fff8e6; border: 1px solid #f3dfae; color: #7a5b12; border-radius: 12px; padding: 12px 16px; font-size: 13.5px; display: none; }
-      .modal-note.show { display: block; }
-      .modal-foot {
-        position: sticky; bottom: 0; background: #fff;
-        border-top: 1px solid var(--line);
-        padding: 16px 26px calc(16px + env(safe-area-inset-bottom));
-        display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 26px;
-      }
-      .modal-foot .price .amount { font-size: 26px; }
-
-      /* ---------- motion ---------- */
-      @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
-      @keyframes lineUp { from { transform: translateY(115%); } to { transform: translateY(0); } }
-      .fade-up { animation: fadeUp 0.9s cubic-bezier(0.22, 0.61, 0.21, 1) both; }
-      .h-mask { display: block; overflow: hidden; padding: 0.14em 0; margin: -0.14em 0; }
-      .h-mask > span { display: block; animation: lineUp 0.95s cubic-bezier(0.22, 0.61, 0.21, 1) both; }
-      html.js .rv {
-        opacity: 0; transform: translateY(18px);
-        transition: opacity 0.7s ease var(--rv-delay, 0s), transform 0.7s cubic-bezier(0.22, 0.61, 0.21, 1) var(--rv-delay, 0s);
-      }
-      html.js .rv.in { opacity: 1; transform: translateY(0); }
-
-      @media (prefers-reduced-motion: reduce) {
-        html { scroll-behavior: auto; }
-        .btn, .tab, .card, .faq-q .chev, .details-link svg, .modal-close { transition: none; }
-        .fade-up, .h-mask > span, .modal, .modal-backdrop.open { animation: none; }
-        html.js .rv { opacity: 1; transform: none; transition: none; }
-        .btn:hover, .card:hover, .tab:hover { transform: none; box-shadow: none; }
-      }
-    </style>
-    <script>document.documentElement.classList.add("js");</script>
-  </head>
-  <body>
-
-    <header class="topbar">
-      <div class="wrap topbar-in">
-        <a class="brand" href="#top" aria-label="Prestige Store">
-          <span class="brand-mark">P</span>
-          <span class="brand-name latin">Prestige Store<small>متجر الاشتراكات الرقمية</small></span>
-        </a>
-        <nav class="nav">
-          <a href="#products">المنتجات</a>
-          <a href="#how">كيف تطلب؟</a>
-          <a href="#pay">الدفع</a>
-          <a href="#faq">الأسئلة الشائعة</a>
-          <a class="btn btn-sm" href="https://t.me/prestige_Digital_bot" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4 20-7z"/><path d="M22 2 11 13"/></svg>
-            اطلب عبر البوت
-          </a>
-        </nav>
-      </div>
-    </header>
-
-    <div class="hero" id="top">
-      <div class="wrap hero-in">
-        <h1><span class="h-mask"><span>وفّر الكثير على اشتراكات</span></span><span class="h-mask"><span style="animation-delay: 0.14s">الذكاء الاصطناعي والبث والألعاب</span></span></h1>
-        <p class="lead fade-up" style="animation-delay: 0.36s">اشتراكات أصلية بأسعار واضحة بـ <span class="latin">USDT</span> — اختر منتجك، ادفع من محفظتك داخل البوت، واستلم فوراً في أي وقت.</p>
-        <div class="hero-feats fade-up" style="animation-delay: 0.5s">
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg> تسليم فوري وتلقائي</span>
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.6 8-10V5l-8-3-8 3v7c0 6.4 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> دفع آمن بـ USDT</span>
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> يعمل في جميع البلدان</span>
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 8.5-8.5 8.38 8.38 0 0 1 8.5 8.5z"/></svg> دعم على مدار الساعة</span>
-        </div>
-      </div>
+<section class="hero"><div class="stars"></div><div class="glow"></div>
+  <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div><div class="orb-core"></div>
+  <div class="wrap hero-in">
+    <span class="badge">✨ متجر الاشتراكات الرقمية — تسليم فوري</span>
+    <h1>Prestige Store</h1>
+    <p class="lead">اشتراكات أصلية بأسعار واضحة بـ USDT — اختر منتجك، ادفع من محفظتك داخل البوت، واستلم فوراً في أي وقت.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://t.me/prestige_Digital_bot">افتح البوت واطلب الآن</a>
+      <a class="btn btn-ghost" href="#products">تصفّح المنتجات ↓</a>
     </div>
-
-    <div class="tabsbar">
-      <div class="wrap">
-        <div class="tabs" role="group" aria-label="تصنيفات المنتجات">
-          <button class="tab active" data-filter="all">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
-            الجميع
-          </button>
-          <button class="tab" data-filter="ai">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/><path d="M9.5 13.2a2.6 2.6 0 0 1 5 0"/></svg>
-            ذكاء اصطناعي
-          </button>
-          <button class="tab" data-filter="media">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m10 9 5 3-5 3V9z"/></svg>
-            بث وترفيه
-          </button>
-          <button class="tab" data-filter="music">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-            موسيقى
-          </button>
-          <button class="tab" data-filter="design">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
-            تصميم
-          </button>
-          <button class="tab" data-filter="work">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-            إنتاجية
-          </button>
-        </div>
-      </div>
+    <div class="stats">
+      <div class="stat"><b>⚡ فوري</b><span>تسليم تلقائي</span></div>
+      <div class="stat"><b>USDT</b><span>دفع آمن</span></div>
+      <div class="stat"><b>21 منتجاً</b><span>في المتجر</span></div>
+      <div class="stat"><b>24/7</b><span>دعم متواصل</span></div>
     </div>
+  </div>
+</section>
 
-    <section id="products" style="padding-top: 44px;">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2>تسوّق الاشتراكات</h2>
-          <p>اضغط على أي منتج لعرض وصفه الكامل وطريقة الشراء — الأسعار نهائية بـ USDT، والتسليم فوري داخل البوت.</p>
-        </div>
+<div class="ticker"><span>Gemini Pro • Canva • Muse AI • ChatGPT Go • Lovable • CapCut • Duolingo • Spotify • Netflix • ElevenLabs • Adobe • Apple Music • LinkedIn • Autodesk • Max • Crunchyroll •&nbsp;</span></div>
 
-                <div class="grid" id="grid">
-<article class="card" data-cat="ai" data-id="gemini" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل Gemini Pro">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/gemini.webp" alt="شرارة ذكاء اصطناعي متوهجة بتدرج أزرق وبنفسجي على خلفية ليلية داكنة" loading="lazy" />
-              <span class="badge-featured">الأكثر طلباً</span>
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Gemini Pro</span> — خطة 18 شهراً</h3>
-              <p class="desc">أقوى نماذج Google مع تخزين سحابي 5TB وحساب خاص 100%، بدون بطاقة بنكية.</p>
-              <div class="card-foot">
-                <div class="price"><small>لمدة 18 شهراً</small><span class="amount">3 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
-<article class="card" data-cat="design" data-id="canva-pro" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل Canva Pro">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-canva-pro.webp" alt="أدوات تصميم ملونة: فرشاة بألوان قوس قزح وقلم وأشكال هندسية على خلفية فيروزية" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Canva Pro</span> — دعوة 3 سنوات</h3>
-              <p class="desc">دعوة Canva Pro على بريدك الخاص لمدة 3 سنوات — كل مميزات Pro، بدون ضمان.</p>
-              <div class="card-foot">
-                <div class="price"><small>دعوة — 3 سنوات</small><span class="amount">2 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
-<article class="card" data-cat="design" data-id="canva-edu" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل Canva Edu">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-canva-edu.webp" alt="قبعة تخرج سوداء بشراشيب ذهبية مع أقلام ملونة وأدوات تصميم" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Canva Edu</span> — سنة كاملة</h3>
-              <p class="desc">نسخة التعليم من Canva لمدة عام كامل — مثالية للطلبة والمعلمين وفرق العمل الدراسية.</p>
-              <div class="card-foot">
-                <div class="price"><small>لمدة سنة</small><span class="amount">3 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
-<article class="card" data-cat="design" data-id="canva-panel" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل Canva Panel">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-canva-panel.webp" alt="فريق عمل متعاون حول شاشة تصميم كبيرة تعرض ألواناً ورسوماً بيانية" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Canva Panel</span> — 500 مستخدم</h3>
-              <p class="desc">لوحة Canva تتسع لـ 500 مستخدم: ادعُ فريقك أو زبائنك ووزّع حسابات Pro من مكان واحد.</p>
-              <div class="card-foot">
-                <div class="price"><small>500 مستخدم</small><span class="amount">10 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
-<article class="card" data-cat="ai" data-id="claude" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل Muse AI">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-claude.webp" alt="روبوت محادثة ذكي متوهج باللون الأزرق مع فقاعة محادثة على خلفية رقمية" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Muse AI</span> — مليار توكن (1B)</h3>
-              <p class="desc">حساب جاهز بمليار توكن لاستخدام Muse في الكتابة والتحليل والبرمجة وبناء المواقع والبوتات.</p>
-              <div class="card-foot">
-                <div class="price"><small>باقة 1B توكن</small><span class="amount">5 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
-          <article class="card" data-cat="ai" data-id="muse31b" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل <span class="latin">Muse AI</span> — 31 مليار توكن (31B)">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-claude.webp" alt="روبوت محادثة ذكي متوهج باللون الأزرق مع فقاعة محادثة على خلفية رقمية" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Muse AI</span> — 31 مليار توكن (31B)</h3>
-              <p class="desc">حساب جاهز بـ 31 مليار توكن لاستخدام Muse في الكتابة والتحليل والبرمجة وبناء المواقع والبوتات — مع كل معلومات الدخول، وبدون ضمان.</p>
-              <div class="card-foot">
-                <div class="price"><small>باقة 31B توكن</small><span class="amount">10 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
+<section id="products"><div class="wrap">
+  <div class="sec-head rv"><h2>تسوّق الاشتراكات</h2><p>اضغط على أي منتج لعرض وصفه الكامل وطريقة الشراء — الأسعار نهائية بـ USDT، والتسليم فوري داخل البوت.</p></div>
+  <div class="grid" id="grid"></div>
+  <p style="text-align:center;color:var(--muted);margin-top:26px">تبحث عن شيء آخر؟ البوت يعرض أيضاً منتجات من شبكة موردينا — <a href="https://t.me/prestige_Digital_bot">تصفّح الكتالوج الكامل في البوت</a>.</p>
+</div></section>
 
-          <article class="card" data-cat="ai" data-id="chatgpt" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل <span class="latin">ChatGPT Go</span> — خطة Go">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-chatgpt.webp" alt="روبوت محادثة ذكي" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">ChatGPT Go</span> — خطة Go</h3>
-              <p class="desc">اشتراك ChatGPT Go لمدة شهر — ضمان 24 ساعة، وتسليم فوري داخل البوت بعد الدفع.</p>
-              <div class="card-foot">
-                <div class="price"><small>خطة Go — شهر</small><span class="amount">12 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
+<section id="how"><div class="wrap">
+  <div class="sec-head rv"><h2>كيف تطلب؟</h2><p>أربع خطوات بسيطة داخل بوت تيليغرام — بدون تسجيل معقّد وبدون انتظار.</p></div>
+  <div class="steps">
+    <div class="step rv"><b class="num">1</b><h3>افتح البوت</h3><p>ادخل إلى بوت @prestige_Digital_bot على تيليغرام واختر لغتك: العربية أو الفرنسية أو الإنجليزية.</p></div>
+    <div class="step rv"><b class="num">2</b><h3>اشحن محفظتك</h3><p>أضف رصيدك بـ USDT — الإيداع تلقائي عبر TRC20 وBEP20، والحد الأدنى للشحن 5 USDT فقط.</p></div>
+    <div class="step rv"><b class="num">3</b><h3>اطلب المنتج</h3><p>اختر منتجك من الكتالوج وادفع من رصيد محفظتك بضغطة واحدة.</p></div>
+    <div class="step rv"><b class="num">4</b><h3>استلم فوراً</h3><p>يصلك اشتراكك تلقائياً داخل المحادثة نفسها خلال لحظات — في أي وقت، ليلاً أو نهاراً.</p></div>
+  </div>
+</div></section>
 
-          <article class="card" data-cat="ai" data-id="lovable" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل <span class="latin">Lovable Pro Lite</span> — 12 شهراً">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-lovable.webp" alt="منصة بناء تطبيقات بالذكاء الاصطناعي" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Lovable Pro Lite</span> — 12 شهراً</h3>
-              <p class="desc">Lovable Pro Lite لمدة 12 شهراً — تفعيل على حسابك الخاص، للحسابات اللي ما عندهاش خطط سابقة برك، لازم يُفعَّل خلال 48 ساعة، وضمان شهرين بعد التفعيل.</p>
-              <div class="card-foot">
-                <div class="price"><small>لمدة 12 شهراً</small><span class="amount">7 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
+<section id="pay"><div class="wrap">
+  <div class="sec-head rv"><h2>طرق الدفع</h2><p>ادفع بالطريقة التي تناسبك — الإيداع التلقائي متاح عبر شبكتي USDT.</p></div>
+  <div class="paygrid">
+    <div class="pay rv"><h3>USDT — TRC20 · إيداع تلقائي</h3><p>حوّل إلى عنوان المحفظة الذي يعرضه البوت، الصق رقم المعاملة (TXID) في البوت، ويُضاف رصيدك تلقائياً بعد تأكيد الشبكة.</p></div>
+    <div class="pay rv"><h3>USDT — BEP20 · إيداع تلقائي</h3><p>نفس التجربة عبر شبكة BNB برسوم تحويل أقل — تحقق تلقائي وإضافة فورية للرصيد.</p></div>
+    <div class="pay rv"><h3>Binance</h3><p>حوّل داخلياً عبر Binance ID ويُعتمد إيداعك يدوياً من الإدارة بسرعة.</p></div>
+    <div class="pay rv"><h3>Bybit</h3><p>حوّل عبر Bybit UID وستعتمد الإدارة إيداعك يدوياً وبسرعة.</p></div>
+  </div>
+  <div class="note rv">الحد الأدنى لشحن المحفظة <b>5 USDT</b> — ورصيدك ملكك بالكامل: يمكنك سحبه كاملاً في أي وقت وبدون حد أدنى للسحب.</div>
+</div></section>
 
-          <article class="card" data-cat="design" data-id="capcut" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل <span class="latin">CapCut Pro</span> — شهر">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-capcut.webp" alt="أدوات مونتاج فيديو" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">CapCut Pro</span> — شهر</h3>
-              <p class="desc">حساب CapCut Pro Team خاص لمدة 30 يوماً، جهازان كحد أقصى، مع ضمان كامل — الدخول عبر تطبيق الهاتف ثم الحاسوب بـ QR code.</p>
-              <div class="card-foot">
-                <div class="price"><small>لمدة شهر</small><span class="amount">2.5 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
+<section><div class="wrap"><div class="ref rv">
+  <div class="big">5%</div>
+  <div style="flex:1;min-width:240px"><h2 style="margin:0 0 8px">برنامج الإحالة</h2><p style="color:var(--muted);line-height:1.8;margin:0">ادعُ أصدقاءك إلى المتجر واكسب <b>5%</b> من أول عملية شراء لكل صديق — تُضاف مباشرة إلى محفظتك داخل البوت، وبدون أي حد أقصى لعدد المدعوين.</p></div>
+  <a class="btn btn-primary" href="https://t.me/prestige_Digital_bot">احصل على رابط الإحالة</a>
+</div></div></section>
 
-<article class="card" data-cat="work" data-id="duolingo" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل Duolingo Super">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-duolingo.webp" alt="بومة خضراء لطيفة محاطة بفقاعات محادثة ونجوم ذهبية على خلفية خضراء" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Duolingo Super</span> — سنة</h3>
-              <p class="desc">تعلّم أي لغة بدون إعلانات وبدون حدود، مع دروس مخصصة بالذكاء الاصطناعي لمدة عام كامل.</p>
-              <div class="card-foot">
-                <div class="price"><small>لمدة 12 شهراً</small><span class="amount">3 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
-          <article class="card" data-cat="music" data-id="spotify" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل <span class="latin">Spotify</span> — 3 أشهر">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-spotify.webp" alt="نوتات موسيقية" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Spotify</span> — 3 أشهر</h3>
-              <p class="desc">Spotify Premium لمدة 3 أشهر على حسابك الخاص — مهم: التفعيل يحتاج VPN على ألمانيا أو إسبانيا، ولازم حساب جديد ومؤهل.</p>
-              <div class="card-foot">
-                <div class="price"><small>لمدة 3 أشهر</small><span class="amount">4 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
+<section><div class="wrap">
+  <div class="sec-head rv"><h2>الأسئلة الشائعة</h2></div>
+  <div class="faq-item rv"><button class="faq-q">متى يصلني اشتراكي؟ <span>＋</span></button><div class="faq-a">التسليم تلقائي بالكامل: بعد الدفع من محفظتك داخل البوت، تصلك بيانات التفعيل أو رابط الدعوة مباشرة في المحادثة نفسها خلال لحظات، في أي ساعة من اليوم.</div></div>
+  <div class="faq-item rv"><button class="faq-q">هل أستطيع سحب رصيدي؟ <span>＋</span></button><div class="faq-a">نعم — رصيدك ملكك بالكامل. يمكنك سحب أي مبلغ، بل رصيدك كاملاً، في أي وقت وبدون حد أدنى للسحب. أدخل المبلغ وعنوان USDT الخاص بك داخل البوت، وستعتمد الإدارة طلبك يدوياً.</div></div>
+  <div class="faq-item rv"><button class="faq-q">كم الحد الأدنى للشحن؟ <span>＋</span></button><div class="faq-a">الحد الأدنى للشحن هو 5 USDT فقط. إيداعات USDT عبر شبكتي TRC20 وBEP20 تُضاف تلقائياً فور التحقق من المعاملة على الشبكة.</div></div>
+  <div class="faq-item rv"><button class="faq-q">اشتريت Gemini Pro — ماذا بعد؟ <span>＋</span></button><div class="faq-a">ستصلك تعليمات التفعيل مع رابط خاص. ملاحظة مهمة: يجب استخدام رابط التفعيل خلال ساعة واحدة من استلامه، وبعد هذه المدة لا يمكن استبداله أو إعادة إصداره. من مزايا الخطة: مساحة تخزين سحابية 5TB، وحتى 5 مستخدمين بحساب خاص وبدون مشاركة.</div></div>
+  <div class="faq-item rv"><button class="faq-q">بأي لغة يعمل البوت؟ <span>＋</span></button><div class="faq-a">البوت متوفر بثلاث لغات: العربية والفرنسية والإنجليزية — اختر لغتك عند أول تشغيل وبدّلها في أي وقت من الإعدادات.</div></div>
+</div></section>
 
-          <article class="card" data-cat="media" data-id="netflix" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل <span class="latin">Netflix Premium 4K</span> — شهر">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-netflix.webp" alt="شاشة بث أفلام ومسلسلات" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Netflix Premium 4K</span> — شهر</h3>
-              <p class="desc">Netflix Premium 4K — مقعد بروفايل واحد لمدة شهر، ضمان كامل — مفتاح تفعيل يوصلك، ابعثو للدعم ويوصلك رابط الدخول. قد تحتاج VPN، وهذا حساب مشترك.</p>
-              <div class="card-foot">
-                <div class="price"><small>لمدة شهر</small><span class="amount">3 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
+<section><div class="wrap"><div class="final rv">
+  <h2 style="font-size:clamp(26px,4vw,38px);margin:0 0 12px">منتجك التالي على بُعد ضغطة واحدة</h2>
+  <p style="color:var(--muted)">افتح البوت الآن، اشحن محفظتك، واستلم اشتراكك في لحظات.</p>
+  <a class="btn btn-primary" href="https://t.me/prestige_Digital_bot">اطلب عبر البوت</a>
+  <p style="margin-top:18px">الدعم: <a href="https://t.me/Rdss2">@Rdss2</a></p>
+</div></div></section>
 
-          <article class="card" data-cat="ai" data-id="elevenlabs" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل <span class="latin">ElevenLabs</span> — رصيد 1M">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-elevenlabs.webp" alt="ميكروفون لتوليد الصوت بالذكاء الاصطناعي" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">ElevenLabs</span> — رصيد 1M</h3>
-              <p class="desc">توليد الصوت بالذكاء الاصطناعي عبر Vibi.Pro — أكثر من 10,000 صوت متعدد اللغات، والنقاط الشهرية المتبقية ما تنتهيش.</p>
-              <div class="card-foot">
-                <div class="price"><small>رصيد 1M نقطة</small><span class="amount">12 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
+<footer><div class="wrap">
+  Prestige Store — متجر الاشتراكات الرقمية · الأسعار بـ USDT · الدعم عبر <a href="https://t.me/Rdss2">@Rdss2</a><br />
+  تصميم الصفحة مستوحى من قالب AI landing مفتوح المصدر برخصة MIT (stunning-ia-lp) — أُعيد بناؤه كصفحة ثابتة لهذا المتجر.
+</div></footer>
 
-<article class="card" data-cat="design" data-id="adobe" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل Adobe Express">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-adobe.webp" alt="أدوات إبداعية حمراء متوهجة: ريشة قلم وفرشاة وأيقونتا صورة وفيديو" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Adobe Express</span> — سنة</h3>
-              <p class="desc">صمّم منشورات وفيديوهات احترافية بأدوات Adobe السريعة لمدة سنة كاملة.</p>
-              <div class="card-foot">
-                <div class="price"><small>لمدة 12 شهراً</small><span class="amount">2 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
-<article class="card" data-cat="music" data-id="music" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل Apple Music">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-music.webp" alt="نوتة موسيقية لامعة بتدرج أحمر ووردي مع موجات صوتية على خلفية داكنة" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Apple Music</span> — 5 أشهر</h3>
-              <p class="desc">ملايين الأغاني بجودة عالية وبدون إعلانات، مع التحميل والاستماع دون اتصال.</p>
-              <div class="card-foot">
-                <div class="price"><small>لمدة 5 أشهر</small><span class="amount">2 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
-<article class="card" data-cat="work" data-id="linkedin2" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل LinkedIn Premium لشهرين">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-linkedin2.webp" alt="شارة مهنية ذهبية فاخرة بحقيبة عمل على خلفية زرقاء داكنة" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">LinkedIn Premium</span> — شهرين</h3>
-              <p class="desc">رسائل InMail مباشرة، معرفة من شاهد ملفك، ودورات LinkedIn Learning لبناء مسارك المهني.</p>
-              <div class="card-foot">
-                <div class="price"><small>لمدة شهرين</small><span class="amount">2.5 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
-<article class="card" data-cat="work" data-id="linkedin3" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل LinkedIn Premium لثلاثة أشهر">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-linkedin3.webp" alt="شارة مهنية ذهبية فاخرة بحقيبة عمل على خلفية زرقاء داكنة" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">LinkedIn Premium</span> — 3 أشهر</h3>
-              <p class="desc">نفس مزايا Premium لمدة أطول — الخيار الأذكى لمن يبني حضوره المهني بجدية.</p>
-              <div class="card-foot">
-                <div class="price"><small>لمدة 3 أشهر</small><span class="amount">3 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
-<article class="card" data-cat="work" data-id="autodesk" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل Autodesk">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-autodesk.webp" alt="نموذجان ثلاثيا الأبعاد بخطوط زرقاء متوهجة: مبنى حديث وسيارة رياضية على شبكة مخططات" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Autodesk All Apps</span> — 3 سنوات</h3>
-              <p class="desc">جميع تطبيقات Autodesk الهندسية — AutoCAD و3ds Max وMaya وغيرها — برخصة كاملة لثلاث سنوات.</p>
-              <div class="card-foot">
-                <div class="price"><small>لمدة 3 سنوات</small><span class="amount">4.5 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
-<article class="card" data-cat="work" data-id="autodesk-panel" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل Autodesk Admin Panel">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-autodesk-panel.webp" alt="لوحة تحكم إدارية داكنة تعرض رسوماً بيانية ومؤشرات وقوائم مستخدمين زرقاء متوهجة" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Autodesk Admin Panel</span> — لوحة المشرف</h3>
-              <p class="desc">لوحة إدارة بـ 3000 دعوة: فعّل رخص Autodesk لزبائنك بنفسك وحقّق هامش ربحك الخاص.</p>
-              <div class="card-foot">
-                <div class="price"><small>3000 دعوة</small><span class="amount">15 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
-<article class="card" data-cat="media" data-id="max" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل Max">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-max.webp" alt="زر تشغيل بنفسجي لامع متوهج بأشعة ضوئية على خلفية داكنة" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Max</span> — شهر</h3>
-              <p class="desc">أقوى أفلام ومسلسلات HBO الأصلية بجودة عالية وبدون إعلانات لمدة شهر كامل.</p>
-              <div class="card-foot">
-                <div class="price"><small>لمدة شهر</small><span class="amount">5 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
-<article class="card" data-cat="media" data-id="crunchy" tabindex="0" role="button" aria-haspopup="dialog" aria-label="عرض تفاصيل Crunchyroll">
-            <div class="ph-wrap">
-              <img class="ph" src="assets/p-crunchy.webp" alt="شخصية أنمي نارية برتقالية في وضعية حركة ديناميكية وسط دوامة لهب" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3><span class="latin">Crunchyroll</span> — شهر</h3>
-              <p class="desc">أكبر مكتبة أنمي في العالم، حلقات جديدة فور صدورها في اليابان وبدون إعلانات.</p>
-              <div class="card-foot">
-                <div class="price"><small>لمدة شهر</small><span class="amount">2.5 <span class="cur">USDT</span></span></div>
-                <span class="details-link">التفاصيل <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
-              </div>
-            </div>
-          </article>
-<p class="browse-note">تبحث عن شيء آخر؟ البوت يعرض أيضاً مئات المنتجات من شبكة موردينا — <a href="https://t.me/prestige_Digital_bot" target="_blank" rel="noopener">تصفّح الكتالوج الكامل في البوت</a>.</p>
-      </div>
-    </section>
+<div class="backdrop" id="backdrop"><div class="modal">
+  <button class="close" onclick="closeProduct()">×</button>
+  <img id="m-img" src="" alt="" />
+  <h3 id="m-name"></h3>
+  <div style="font-size:28px;font-weight:800"><span id="m-price"></span> <span style="font-size:14px;color:var(--violet2)">USDT</span> · <span id="m-period" style="font-size:15px;color:var(--muted);font-weight:400"></span></div>
+  <p id="m-desc"></p>
+  <a class="btn btn-primary" href="https://t.me/prestige_Digital_bot" style="margin-top:10px;display:inline-block">اطلب من البوت</a>
+</div></div>
 
-    <section id="how" class="soft-bg" style="padding-top: 56px; padding-bottom: 56px;">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2>كيف تطلب؟</h2>
-          <p>أربع خطوات بسيطة داخل بوت تيليغرام — بدون تسجيل معقّد وبدون انتظار.</p>
-        </div>
-        <div class="how-grid">
-          <div class="how-step">
-            <span class="num">1</span>
-            <h3>افتح البوت</h3>
-            <p>ادخل إلى بوت <span dir="ltr">@prestige_Digital_bot</span> على تيليغرام واختر لغتك: العربية أو الفرنسية أو الإنجليزية.</p>
-          </div>
-          <div class="how-step">
-            <span class="num">2</span>
-            <h3>اشحن محفظتك</h3>
-            <p>أضف رصيدك بـ USDT — الإيداع تلقائي عبر TRC20 وBEP20، والحد الأدنى للشحن 5 USDT فقط.</p>
-          </div>
-          <div class="how-step">
-            <span class="num">3</span>
-            <h3>اطلب المنتج</h3>
-            <p>اختر منتجك من الكتالوج وادفع من رصيد محفظتك بضغطة واحدة.</p>
-          </div>
-          <div class="how-step">
-            <span class="num">4</span>
-            <h3>استلم فوراً</h3>
-            <p>يصلك اشتراكك تلقائياً داخل المحادثة نفسها خلال لحظات — في أي وقت، ليلاً أو نهاراً.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="pay" style="padding-top: 56px;">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2>طرق الدفع</h2>
-          <p>ادفع بالطريقة التي تناسبك — الإيداع التلقائي متاح عبر شبكتي USDT.</p>
-        </div>
-        <div class="pay-grid">
-          <div class="pay">
-            <span class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 7h8M12 7v10M9.5 17h5"/></svg></span>
-            <div>
-              <h3><span class="latin">USDT — TRC20</span><span class="auto">إيداع تلقائي</span></h3>
-              <p>حوّل إلى عنوان المحفظة، الصق رقم المعاملة (TXID) في البوت، ويُضاف رصيدك تلقائياً بعد تأكيد الشبكة.</p>
-            </div>
-          </div>
-          <div class="pay">
-            <span class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 7h8M12 7v10M9.5 17h5"/></svg></span>
-            <div>
-              <h3><span class="latin">USDT — BEP20</span><span class="auto">إيداع تلقائي</span></h3>
-              <p>نفس التجربة السريعة عبر شبكة BNB برسوم تحويل أقل — تحقق تلقائي وإضافة فورية للرصيد.</p>
-            </div>
-          </div>
-          <div class="pay">
-            <span class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span>
-            <div>
-              <h3><span class="latin">Binance</span></h3>
-              <p>حوّل داخلياً عبر Binance ID ويُعتمد إيداعك يدوياً من فريقنا بسرعة.</p>
-            </div>
-          </div>
-          <div class="pay">
-            <span class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span>
-            <div>
-              <h3><span class="latin">Bybit</span></h3>
-              <p>حوّل عبر Bybit UID وستعتمد الإدارة إيداعك يدوياً وبسرعة.</p>
-            </div>
-          </div>
-        </div>
-        <p class="pay-note">الحد الأدنى لشحن المحفظة <strong>5 USDT</strong> — ورصيدك ملكك بالكامل: يمكنك سحبه كاملاً في أي وقت وبدون حد أدنى للسحب.</p>
-      </div>
-    </section>
-
-    <section id="faq" style="padding-top: 8px;">
-      <div class="wrap split">
-        <div class="ref-card">
-          <img src="assets/ref-friends.webp" alt="صديقان يضحكان وهما ينظران إلى هاتف في ضوء الغروب" loading="lazy" />
-          <div class="ref-body">
-            <div class="ref-big">5%</div>
-            <h3>برنامج الإحالة</h3>
-            <p>ادعُ أصدقاءك إلى المتجر واكسب <strong>5%</strong> من أول عملية شراء لكل صديق — تُضاف مباشرة إلى محفظتك داخل البوت، وبدون أي حد أقصى لعدد المدعوين.</p>
-            <a class="btn btn-sm" style="margin-top: 20px;" href="https://t.me/prestige_Digital_bot" target="_blank" rel="noopener">احصل على رابط الإحالة</a>
-          </div>
-        </div>
-
-        <div>
-          <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 22px;">الأسئلة الشائعة</h2>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">كيف يتم تسليم المنتج؟ <svg class="chev" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
-            <div class="faq-a">التسليم تلقائي بالكامل: بعد الدفع من محفظتك داخل البوت، تصلك بيانات التفعيل أو رابط الدعوة مباشرة في المحادثة نفسها خلال لحظات، في أي ساعة من اليوم.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">هل يمكنني سحب رصيدي من المحفظة؟ <svg class="chev" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
-            <div class="faq-a">نعم — رصيدك ملكك بالكامل. يمكنك سحب أي مبلغ، بل رصيدك كاملاً، في أي وقت وبدون حد أدنى للسحب. أدخل المبلغ وعنوان USDT الخاص بك داخل البوت، وستعتمد الإدارة طلبك يدوياً.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">ما هو الحد الأدنى لشحن المحفظة؟ <svg class="chev" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
-            <div class="faq-a">الحد الأدنى للشحن هو 5 USDT فقط. إيداعات USDT عبر شبكتي TRC20 وBEP20 تُضاف تلقائياً فور التحقق من المعاملة على الشبكة.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">اشتريت Gemini Pro — ماذا بعد؟ <svg class="chev" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
-            <div class="faq-a">ستصلك تعليمات التفعيل مع رابط خاص. ملاحظة مهمة: يجب استخدام رابط التفعيل خلال ساعة واحدة من استلامه، وبعد هذه المدة لا يمكن استبداله أو إعادة إصداره. من مزايا الخطة: مساحة تخزين سحابية 5TB، وحتى 5 مستخدمين بحساب خاص وبدون مشاركة.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">بأي لغة يعمل البوت؟ <svg class="chev" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
-            <div class="faq-a">البوت متوفر بثلاث لغات: العربية والفرنسية والإنجليزية — اختر لغتك عند أول تشغيل وبدّلها في أي وقت من الإعدادات.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="wrap">
-      <div class="final-band">
-        <h2>منتجك التالي على بُعد ضغطة واحدة</h2>
-        <p>افتح البوت الآن، اشحن محفظتك، واستلم اشتراكك في لحظات.</p>
-        <a class="btn btn-white" href="https://t.me/prestige_Digital_bot" target="_blank" rel="noopener">اطلب عبر البوت</a>
-      </div>
-    </div>
-
-    <footer>
-      <div class="wrap">
-        <div class="foot-in">
-          <a class="brand" href="#top" aria-label="Prestige Store">
-            <span class="brand-mark">P</span>
-            <span class="brand-name latin">Prestige Store</span>
-          </a>
-          <nav class="foot-links">
-            <a href="https://t.me/prestige_Digital_bot" target="_blank" rel="noopener">بوت تيليغرام</a>
-            <a href="https://t.me/Rdss2" target="_blank" rel="noopener">تيليغرام — @Rdss2</a>
-            <a href="https://wa.me/213778615374" target="_blank" rel="noopener">واتساب</a>
-            <a href="https://www.instagram.com/zakizaki_st" target="_blank" rel="noopener">إنستغرام</a>
-          </nav>
-        </div>
-        <p class="foot-note">جميع الأسعار بالدولار الرقمي USDT. التسليم والدعم عبر بوت تيليغرام على مدار الساعة.</p>
-      </div>
-    </footer>
-
-    <!-- product detail modal -->
-    <div class="modal-backdrop" id="modalBackdrop">
-      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" id="modalBox">
-        <div class="modal-hero">
-          <img id="modalImg" src="assets/gemini.webp" alt="" />
-          <button class="modal-close" id="modalClose" aria-label="إغلاق التفاصيل">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-          </button>
-        </div>
-        <div class="modal-body">
-          <span class="modal-cat" id="modalCat"></span>
-          <h2 id="modalTitle"></h2>
-          <div class="modal-price">
-            <span class="amount"><span id="modalPrice"></span> <span class="cur">USDT</span></span>
-            <span class="period" id="modalPeriod"></span>
-          </div>
-          <p class="modal-desc" id="modalDesc"></p>
-          <ul class="feat-list" id="modalFeats"></ul>
-
-          <h4>طريقة الشراء — خطوة بخطوة</h4>
-          <div class="buy-steps">
-            <div class="buy-step">
-              <span class="num">1</span>
-              <div>
-                <h5>افتح البوت</h5>
-                <p>اضغط زر «اشتري الآن» بالأسفل لفتح بوت Prestige Store على تيليغرام.</p>
-              </div>
-            </div>
-            <div class="buy-step">
-              <span class="num">2</span>
-              <div>
-                <h5>اشحن محفظتك</h5>
-                <p>أضف رصيد USDT إلى محفظتك داخل البوت (الحد الأدنى 5 USDT) عبر TRC20 أو BEP20 أو Binance أو Bybit.</p>
-              </div>
-            </div>
-            <div class="buy-step">
-              <span class="num">3</span>
-              <div>
-                <h5>اطلب المنتج</h5>
-                <p>اختر هذا المنتج من كتالوج البوت وادفع من رصيد محفظتك بضغطة واحدة.</p>
-              </div>
-            </div>
-            <div class="buy-step">
-              <span class="num">4</span>
-              <div>
-                <h5>استلم فوراً</h5>
-                <p>تصلك بيانات التفعيل تلقائياً داخل المحادثة نفسها خلال لحظات.</p>
-              </div>
-            </div>
-          </div>
-
-          <h4>التسليم والضمان</h4>
-          <div class="assure">
-            <div class="assure-box">
-              <h5><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg> التسليم</h5>
-              <p>تسليم فوري وتلقائي داخل بوت تيليغرام فور تأكيد الدفع من محفظتك — يعمل على مدار الساعة، في أي بلد، وبدون بطاقة بنكية.</p>
-            </div>
-            <div class="assure-box">
-              <h5><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.6 8-10V5l-8-3-8 3v7c0 6.4 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> الضمان والدعم</h5>
-              <p>كل منتج مغطى طوال مدة اشتراكه: إذا واجهت أي مشكلة في التفعيل، تواصل مع الدعم عبر البوت أو تيليغرام وواتساب وسنحلّها أو نعوّضك.</p>
-            </div>
-          </div>
-          <div class="modal-note" id="modalNote"></div>
-        </div>
-        <div class="modal-foot">
-          <div class="price">
-            <small id="modalFootPeriod"></small>
-            <span class="amount"><span id="modalFootPrice"></span> <span class="cur">USDT</span></span>
-          </div>
-          <a class="btn" href="https://t.me/prestige_Digital_bot" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4 20-7z"/><path d="M22 2 11 13"/></svg>
-            اشتري الآن
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      var BOT_URL = "https://t.me/prestige_Digital_bot";
-      var CATS = { ai: "ذكاء اصطناعي", media: "بث وترفيه", music: "موسيقى", design: "تصميم", work: "إنتاجية" };
-      var CHECK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
-
-      var PRODUCTS = {
-        "gemini": {
-          name: "Gemini Pro — خطة 18 شهراً", price: "3", period: "لمدة 18 شهراً",
-          desc: "خطة Gemini Pro الكاملة من Google لمدة 18 شهراً كاملة بسعر لا يُنافس. تحصل على أقوى نماذج Gemini للكتابة والبحث والبرمجة وتوليد الصور، مع مساحة تخزين سحابية ضخمة وحساب خاص بك 100% — بدون مشاركة مع أي شخص، وبدون الحاجة إلى بطاقة بنكية، ويعمل في أي بلد.",
-          feats: ["مساحة تخزين سحابية 5TB على Google Drive وPhotos", "حساب خاص 100% — بدون مشاركة مع أي شخص", "حتى 5 مستخدمين من عائلتك على نفس الخطة", "لا حاجة لبطاقة بنكية ويعمل في جميع البلدان", "صلاحية كاملة حتى نهاية الـ 18 شهراً"],
-          note: "مهم: يجب استخدام رابط التفعيل خلال ساعة واحدة من استلامه — بعد هذه المدة لا يمكن استبداله أو إعادة إصداره."
-        },
-        "claude": {
-          name: "Muse AI — مليار توكن (1B)", price: "5", period: "باقة 1B توكن",
-          desc: "حساب Muse AI جاهز للاستخدام مع رصيد ضخم: مليار توكن (1B). مثالي لمن يعتمد على Muse يومياً في الكتابة والتحليل والبرمجة — بناء المواقع والبوتات، إدارة الصفحات والحملات، تلخيص المستندات الطويلة والمزيد، دون القلق من حدود الاستخدام المعتادة.",
-          feats: ["رصيد كامل: مليار توكن (1B) جاهز للاستخدام", "مثالي للبرمجة وبناء المواقع والبوتات", "كتابة وتحليل وتلخيص احترافي للنصوص الطويلة", "حساب خاص بك — بياناتك وحدك", "تسليم فوري داخل البوت"]
-        },
-        "max": {
-          name: "Max — شهر", price: "5", period: "لمدة شهر",
-          desc: "اشتراك Max (المعروفة سابقاً بـ HBO Max) لمدة شهر كامل. موطن أقوى الإنتاجات الأصلية من HBO — مسلسلات عالمية حائزة على الجوائز وأفلام حديثة — بجودة عالية وبدون إعلانات.",
-          feats: ["مكتبة HBO الأصلية كاملة لمدة شهر", "مسلسلات وأفلام عالمية بجودة عالية", "تجربة مشاهدة بدون إعلانات", "تفعيل سريع داخل البوت"]
-        },
-        "crunchy": {
-          name: "Crunchyroll — شهر", price: "2.5", period: "لمدة شهر",
-          desc: "اشتراك Crunchyroll لمدة شهر: أكبر مكتبة أنمي في العالم في مكان واحد. آلاف الحلقات والأفلام، مع إصدارات جديدة تصل فور عرضها في اليابان، وبث بجودة عالية وبدون إعلانات.",
-          feats: ["أكبر مكتبة أنمي في العالم", "حلقات جديدة فور صدورها في اليابان", "بث بجودة عالية وبدون إعلانات", "ترجمة متوفرة لعناوين كثيرة"]
-        },
-        "music": {
-          name: "Apple Music — 5 أشهر", price: "2", period: "لمدة 5 أشهر",
-          desc: "اشتراك Apple Music لمدة 5 أشهر كاملة. ملايين الأغاني والألبومات وقوائم التشغيل بجودة صوت عالية، بدون أي إعلانات، مع إمكانية تحميل أغانيك والاستماع إليها دون اتصال بالإنترنت.",
-          feats: ["ملايين الأغاني بجودة عالية لمدة 5 أشهر", "بدون إعلانات نهائياً", "تحميل واستماع دون اتصال", "يعمل على آيفون وأندرويد وجميع أجهزتك"]
-        },
-        "canva-pro": {
-          name: "Canva Pro — دعوة 3 سنوات", price: "2", period: "دعوة — 3 سنوات",
-          desc: "دعوة Canva Pro على بريدك الخاص لمدة 3 سنوات: كل مميزات Canva Pro — قوالب جاهزة بلا حدود، إزالة خلفية الصور بضغطة واحدة، ومكتبة ضخمة من الصور والعناصر. بدون ضمان، والتفعيل بإرسال بريدك بعد الشراء.",
-          feats: ["قوالب وعناصر Premium بلا حدود", "إزالة خلفية الصور بضغطة واحدة", "أداة تغيير الحجم السحري لجميع المنصات", "مكتبة ضخمة من الصور والخطوط والفيديوهات"]
-        },
-        "canva-edu": {
-          name: "Canva Edu — سنة كاملة", price: "3", period: "لمدة سنة",
-          desc: "نسخة التعليم من Canva لمدة سنة كاملة. كل مزايا التصميم الاحترافي في بيئة تعليمية آمنة — الخيار المثالي للطلبة والمعلّمين وفرق العمل الدراسية لإعداد العروض والمشاريع والملصقات.",
-          feats: ["اشتراك تعليمي كامل لمدة سنة", "قوالب تعليمية جاهزة للعروض والمشاريع", "أدوات تصميم احترافية كاملة", "مثالي للطلبة والمعلمين"]
-        },
-        "canva-panel": {
-          name: "Canva Panel — 500 مستخدم", price: "10", period: "500 مستخدم",
-          desc: "لوحة Canva Panel الخاصة بك تتسع لـ 500 مستخدم: ادعُ فريقك أو زبائنك ووزّع عليهم حسابات Canva Pro من مكان واحد. خيار البائعين وفرق العمل الذين يديرون حسابات تصميم لعشرات العملاء.",
-          feats: ["لوحة إدارة تتسع لـ 500 مستخدم", "دعوات فورية لحسابات Canva Pro", "تحكّم كامل بعضويات فريقك أو زبائنك", "مثالية للبائعين ووكالات التصميم"]
-        },
-        "adobe": {
-          name: "Adobe Express — سنة", price: "2", period: "لمدة 12 شهراً",
-          desc: "اشتراك Adobe Express لمدة سنة كاملة: صمّم منشورات سوشيال ميديا وفيديوهات وشعارات وملصقات احترافية بسرعة، بأدوات Adobe الذكية وقوالب جاهزة بجودة عالية — دون خبرة تصميم سابقة.",
-          feats: ["اشتراك كامل لمدة 12 شهراً", "قوالب احترافية لمنشورات وفيديوهات السوشيال ميديا", "أدوات تحرير سريعة بالذكاء الاصطناعي", "من علامة Adobe الموثوقة عالمياً"]
-        },
-        "duolingo": {
-          name: "Duolingo Super — سنة", price: "3", period: "لمدة 12 شهراً",
-          desc: "اشتراك Duolingo Super لمدة سنة كاملة: تعلّم أي لغة من أكثر من 40 لغة بدون إعلانات وبدون حدود للقلوب، مع دروس مخصصة لتصحيح أخطائك بالذكاء الاصطناعي وتتبّع دقيق لتقدمك يوماً بعد يوم.",
-          feats: ["سنة كاملة بدون إعلانات", "قلوب غير محدودة — تعلّم دون توقف", "دروس مخصصة بالذكاء الاصطناعي لتصحيح أخطائك", "أكثر من 40 لغة للاختيار من بينها"]
-        },
-        "linkedin2": {
-          name: "LinkedIn Premium — شهرين", price: "2.5", period: "لمدة شهرين",
-          desc: "اشتراك LinkedIn Premium لمدة شهرين لرفع حضورك المهني: تواصل مباشرة مع مسؤولي التوظيف وأصحاب القرار برسائل InMail، اعرف من زار ملفك، وطوّر مهاراتك بدورات LinkedIn Learning.",
-          feats: ["رسائل InMail للتواصل المباشر مع أي شخص", "معرفة من شاهد ملفك الشخصي", "دورات LinkedIn Learning كاملة", "رؤى متقدمة عن الوظائف والشركات"]
-        },
-        "linkedin3": {
-          name: "LinkedIn Premium — 3 أشهر", price: "3", period: "لمدة 3 أشهر",
-          desc: "نفس مزايا LinkedIn Premium الكاملة لمدة ثلاثة أشهر — الفترة الأذكى لمن يبحث عن عمل أو يبني شبكته المهنية بجدية: InMail، معرفة زوّار ملفك، ودورات LinkedIn Learning، بسعر أقل من التجديد الشهري المتكرر.",
-          feats: ["ثلاثة أشهر كاملة من جميع مزايا Premium", "رسائل InMail ومعرفة من شاهد ملفك", "دورات LinkedIn Learning كاملة", "قيمة أفضل من خطة الشهرين"]
-        },
-        "autodesk": {
-          name: "Autodesk All Apps — 3 سنوات", price: "4.5", period: "لمدة 3 سنوات",
-          desc: "رخصة Autodesk الكاملة لمدة 3 سنوات تشمل جميع التطبيقات الهندسية والإبداعية: AutoCAD للرسم الهندسي، 3ds Max وMaya للنمذجة والتحريك ثلاثي الأبعاد، Revit للهندسة المعمارية وغيرها. للمهندسين والطلبة والمصممين ثلاثي الأبعاد بسعر لا يصدَّق مقارنة بالسعر الرسمي.",
-          feats: ["جميع تطبيقات Autodesk في رخصة واحدة", "AutoCAD وRevit و3ds Max وMaya والمزيد", "رخصة كاملة لمدة 3 سنوات", "مثالي للمهندسين والطلبة والمصممين"]
-        },
-        "autodesk-panel": {
-          name: "Autodesk Admin Panel — لوحة المشرف", price: "15", period: "3000 دعوة",
-          desc: "لوحة إدارة Autodesk بـ 3000 دعوة: كن أنت المورّد — فعّل رخص Autodesk All Apps لزبائنك بنفسك من لوحتك الخاصة، حدّد أسعارك، وحقّق هامش ربحك الكامل على كل عملية تفعيل. منتج مصمم للبائعين وبائعي الجملة.",
-          feats: ["3000 دعوة تفعيل تحت تصرفك", "فعّل رخصاً لزبائنك بنفسك في أي وقت", "حدّد أسعارك وهامش ربحك بحرية", "مصمم للبائعين وأصحاب المتاجر"]
-        },
-        "muse31b": {
-          name: "Muse AI — 31 مليار توكن (31B)", price: "10", period: "باقة 31B توكن",
-          desc: "حساب Muse AI جاهز مع كل معلومات الدخول ورصيد 31 مليار توكن (31B). مثالي لمن يعتمد على Muse يومياً في الكتابة والتحليل والبرمجة وبناء المواقع والبوتات — بدون ضمان.",
-          feats: ["رصيد كامل: 31 مليار توكن جاهز للاستخدام", "حساب جاهز مع كل معلومات الدخول", "مثالي للبرمجة وبناء المواقع والبوتات", "تسليم فوري داخل البوت"]
-        },
-        "chatgpt": {
-          name: "ChatGPT Go — خطة Go", price: "12", period: "خطة Go — شهر",
-          desc: "اشتراك ChatGPT Go لمدة شهر — ضمان 24 ساعة، وتسليم فوري داخل البوت بعد الدفع.",
-          feats: ["اشتراك ChatGPT Go لمدة شهر", "ضمان 24 ساعة", "تسليم فوري داخل البوت"]
-        },
-        "lovable": {
-          name: "Lovable Pro Lite — 12 شهراً", price: "7", period: "لمدة 12 شهراً",
-          desc: "Lovable Pro Lite لمدة 12 شهراً — بدون وسيلة دفع مطلوبة للتفعيل، والتفعيل على حسابك الخاص. تجريبي: يخدم غير على الحسابات اللي ما عندهاش خطط سابقة أو نشطة. ضمان شهرين بعد التفعيل، ولازم يُفعَّل خلال 48 ساعة من الشراء.",
-          feats: ["تفعيل على حسابك الخاص بدون وسيلة دفع", "للحسابات اللي ما عندهاش خطط سابقة برك", "ضمان شهرين بعد التفعيل", "لازم يُفعَّل خلال 48 ساعة من الشراء"]
-        },
-        "capcut": {
-          name: "CapCut Pro — شهر", price: "2.5", period: "لمدة شهر",
-          desc: "حساب CapCut Pro Team خاص لمدة 30 يوماً كاملة، جهازان كحد أقصى، مع ضمان كامل. الدخول: تطبيق الهاتف أولاً، ثم الحاسوب المحمول عبر QR code (تطبيق سطح المكتب، ماشي الويب).",
-          feats: ["حساب Pro Team خاص — 30 يوم كاملة", "جهازان كحد أقصى مع ضمان كامل", "حساب مستقر بدون تجديد 7 أيام", "تسليم بيانات الدخول فوراً بعد الدفع"]
-        },
-        "spotify": {
-          name: "Spotify — 3 أشهر", price: "4", period: "لمدة 3 أشهر",
-          desc: "Spotify Premium لمدة 3 أشهر على حسابك الخاص. مهم: التفعيل يحتاج VPN مضبوط على ألمانيا أو إسبانيا، ولازم حساب جديد ومؤهل — الحسابات اللي كان عندها Premium أو تجربة من قبل ممكن ما تخدمش. ضمان 3 أيام — لا ضمان بعد التفعيل.",
-          feats: ["Premium كامل لمدة 3 أشهر على حسابك الخاص", "لازم حساب جديد ومؤهل", "VPN ألمانيا أو إسبانيا مطلوب للتفعيل", "ضمان 3 أيام"]
-        },
-        "netflix": {
-          name: "Netflix Premium 4K — شهر", price: "3", period: "لمدة شهر",
-          desc: "Netflix Premium 4K — مقعد بروفايل واحد، ضمان كامل لمدة شهر. بعد الطلب يوصلك مفتاح تفعيل — ابعثو للدعم ويوصلك رابط دخول، بلا بريد ولا كلمة سر. تقدر تدخل من الهاتف أو الكمبيوتر أو التلفاز. قد تحتاج VPN. هذا حساب مشترك، أي تغيير يلغي الضمان.",
-          feats: ["مقعد بروفايل واحد Premium 4K", "ضمان كامل لمدة شهر", "رابط دخول عبر مفتاح التفعيل", "دخول من الهاتف أو الكمبيوتر أو التلفاز"]
-        },
-        "elevenlabs": {
-          name: "ElevenLabs — رصيد 1M", price: "12", period: "رصيد 1M نقطة",
-          desc: "توليد الصوت بالذكاء الاصطناعي عبر Vibi.Pro، الشريك الرسمي لـ ElevenLabs وMiniMax — أكثر من 10,000 صوت متعدد اللغات، والنقاط الشهرية ما تنتهيش: تدفع غير مقابل ما تستهلكه. كل كود يُستعمل مرة واحدة فقط على الحساب الصحيح.",
-          feats: ["أكثر من 10,000 صوت متعدد اللغات", "النقاط الشهرية المتبقية ما تنتهيش", "نماذج رسمية من ElevenLabs وMiniMax", "كود يُستعمل مرة واحدة فقط"]
-        },
-      };
-
-      // ---------- category filter ----------
-      var tabs = document.querySelectorAll(".tab");
-      var cards = document.querySelectorAll("#grid .card");
-      tabs.forEach(function (tab) {
-        tab.addEventListener("click", function () {
-          tabs.forEach(function (t) { t.classList.remove("active"); });
-          tab.classList.add("active");
-          var f = tab.getAttribute("data-filter");
-          cards.forEach(function (card) {
-            var show = f === "all" || card.getAttribute("data-cat") === f;
-            card.classList.toggle("hidden", !show);
-            if (show) {
-              card.classList.remove("rv", "in");
-              card.style.removeProperty("--rv-delay");
-            }
-          });
-        });
-      });
-
-      // ---------- product detail modal ----------
-      var backdrop = document.getElementById("modalBackdrop");
-      var modalBox = document.getElementById("modalBox");
-      var lastFocus = null;
-
-      function openProduct(card) {
-        var id = card.getAttribute("data-id");
-        var p = PRODUCTS[id];
-        if (!p) return;
-        var img = card.querySelector("img.ph");
-        var mImg = document.getElementById("modalImg");
-        mImg.src = img.getAttribute("src");
-        mImg.alt = img.getAttribute("alt") || "";
-        document.getElementById("modalCat").textContent = CATS[card.getAttribute("data-cat")] || "";
-        document.getElementById("modalTitle").textContent = p.name;
-        document.getElementById("modalPrice").textContent = p.price;
-        document.getElementById("modalPeriod").textContent = p.period;
-        document.getElementById("modalDesc").textContent = p.desc;
-        document.getElementById("modalFootPrice").textContent = p.price;
-        document.getElementById("modalFootPeriod").textContent = p.period;
-        var feats = document.getElementById("modalFeats");
-        feats.innerHTML = "";
-        p.feats.forEach(function (f) {
-          var li = document.createElement("li");
-          li.innerHTML = CHECK + "<span></span>";
-          li.querySelector("span").textContent = f;
-          feats.appendChild(li);
-        });
-        var note = document.getElementById("modalNote");
-        if (p.note) {
-          note.textContent = p.note;
-          note.classList.add("show");
-        } else {
-          note.textContent = "";
-          note.classList.remove("show");
-        }
-        lastFocus = document.activeElement;
-        backdrop.classList.add("open");
-        document.body.classList.add("locked");
-        modalBox.scrollTop = 0;
-        document.getElementById("modalClose").focus();
-      }
-
-      function closeProduct() {
-        backdrop.classList.remove("open");
-        document.body.classList.remove("locked");
-        if (lastFocus && lastFocus.focus) lastFocus.focus();
-      }
-
-      cards.forEach(function (card) {
-        card.addEventListener("click", function () { openProduct(card); });
-        card.addEventListener("keydown", function (e) {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            openProduct(card);
-          }
-        });
-      });
-      document.getElementById("modalClose").addEventListener("click", closeProduct);
-      backdrop.addEventListener("click", function (e) {
-        if (e.target === backdrop) closeProduct();
-      });
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape" && backdrop.classList.contains("open")) closeProduct();
-      });
-
-      // ---------- FAQ accordion ----------
-      document.querySelectorAll(".faq-item").forEach(function (item) {
-        var btn = item.querySelector(".faq-q");
-        btn.addEventListener("click", function () {
-          var open = item.classList.toggle("open");
-          btn.setAttribute("aria-expanded", open ? "true" : "false");
-        });
-      });
-
-      // ---------- soft scroll reveal ----------
-      var revealEls = document.querySelectorAll(".sec-head, #grid .card, .how-step, .pay, .ref-card, .faq-item, .final-band, .browse-note, .pay-note");
-      var cardIdx = 0;
-      revealEls.forEach(function (el) {
-        el.classList.add("rv");
-        if (el.classList.contains("card")) {
-          el.style.setProperty("--rv-delay", (cardIdx % 3) * 0.07 + "s");
-          cardIdx++;
-        }
-      });
-      if ("IntersectionObserver" in window) {
-        var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              var el = entry.target;
-              el.classList.add("in");
-              io.unobserve(el);
-              setTimeout(function () { el.classList.remove("rv", "in"); el.style.removeProperty("--rv-delay"); }, 1000);
-            }
-          });
-        }, { threshold: 0.1, rootMargin: "0px 0px -6% 0px" });
-        revealEls.forEach(function (el) { io.observe(el); });
-        setTimeout(function () {
-          revealEls.forEach(function (el) {
-            if (el.classList.contains("rv") && !el.classList.contains("in")) {
-              el.classList.add("in");
-              io.unobserve(el);
-              setTimeout(function () { el.classList.remove("rv", "in"); el.style.removeProperty("--rv-delay"); }, 1000);
-            }
-          });
-        }, 1400);
-      } else {
-        revealEls.forEach(function (el) { el.classList.remove("rv"); });
-      }
-    </script>
-  </body>
+<script>
+var PRODUCTS = [
+{name:"Gemini Pro — خطة 18 شهراً",price:"3",period:"لمدة 18 شهراً",img:"assets/gemini.webp",desc:"خطة Gemini Pro الكاملة من Google لمدة 18 شهراً: أقوى نماذج Gemini، تخزين سحابي 5TB، حتى 5 مستخدمين بحساب خاص 100% بدون مشاركة وبدون بطاقة بنكية، يعمل في أي بلد.\n⚠️ رابط التفعيل لازم يستعمل خلال ساعة واحدة من استلام الطلب — بعد ساعة، لا استبدال ولا إعادة إصدار."},
+{name:"Canva Pro — دعوة 3 سنوات",price:"2",period:"دعوة 3 سنوات",img:"assets/p-canva-pro.webp",desc:"دعوة Canva Pro لمدة 3 سنوات على بريدك الخاص: قوالب بلا حدود، إزالة الخلفية، ومكتبة عناصر ضخمة لصنّاع المحتوى والمصممين."},
+{name:"Canva Edu — سنة كاملة",price:"3",period:"لمدة سنة",img:"assets/p-canva-edu.webp",desc:"نسخة التعليم من Canva لمدة عام كامل — مثالية للطلبة والمعلمين وفرق العمل الدراسية."},
+{name:"Canva Panel — 500 مستخدم",price:"10",period:"500 مستخدم",img:"assets/p-canva-panel.webp",desc:"لوحة Canva تتسع لـ 500 مستخدم: ادعُ فريقك أو زبائنك ووزّع حسابات Pro من مكان واحد."},
+{name:"Muse AI — مليار توكن (1B)",price:"5",period:"باقة 1B توكن",img:"assets/p-claude.webp",desc:"حساب جاهز بمليار توكن لاستخدام Muse في الكتابة والتحليل والبرمجة وبناء المواقع والبوتات."},
+{name:"Muse AI — 31 مليار توكن (31B)",price:"10",period:"باقة 31B توكن",img:"assets/p-claude.webp",desc:"حساب جاهز بـ 31 مليار توكن، مع بيانات دخول كاملة. بدون ضمان."},
+{name:"ChatGPT Go — خطة Go",price:"12",period:"خطة Go",img:"assets/p-chatgpt.webp",desc:"اشتراك ChatGPT Go لمدة شهر — ضمان 24 ساعة، وتسليم فوري داخل البوت بعد الدفع."},
+{name:"Lovable Pro Lite — 12 شهراً",price:"7",period:"لمدة 12 شهراً",img:"assets/p-lovable.webp",desc:"اشتراك Lovable Pro Lite لمدة 12 شهراً، يُفعَّل على حسابك الخاص. للاستعمال التجريبي فقط على الحسابات التي ليس لها خطط سابقة أو نشطة، مع نافذة استرداد 48 ساعة وضمان شهرين."},
+{name:"CapCut Pro — شهر",price:"2.50",period:"لمدة شهر",img:"assets/p-capcut.webp",desc:"حساب CapCut Pro Team خاص لمدة 30 يوماً، حتى جهازين كحد أقصى، ضمان كامل، دخول عبر QR من الهاتف ثم الحاسوب."},
+{name:"Duolingo Super — سنة",price:"3",period:"لمدة 12 شهراً",img:"assets/p-duolingo.webp",desc:"تعلّم أي لغة بدون إعلانات وبدون حدود، مع دروس مخصصة بالذكاء الاصطناعي لمدة عام كامل."},
+{name:"Spotify — 3 أشهر",price:"4",period:"لمدة 3 أشهر",img:"assets/p-spotify.webp",desc:"اشتراك Spotify لمدة 3 أشهر على حسابك الخاص. ⚠️ يتطلب VPN (ألمانيا/إسبانيا) عند التفعيل، حساب جديد أو مؤهل، ضمان 3 أيام."},
+{name:"Netflix Premium 4K — شهر",price:"3",period:"لمدة شهر",img:"assets/p-netflix.webp",desc:"مقعد واحد (بروفايل) في حساب Netflix Premium 4K مشترك لمدة شهر، ضمان كامل لشهر واحد، مفتاح تفعيل ثم التواصل مع الدعم لرابط الدخول. قد يتطلب VPN."},
+{name:"ElevenLabs — رصيد 1M",price:"12",period:"رصيد 1M",img:"assets/p-elevenlabs.webp",desc:"رصيد ElevenLabs عبر رابط استرداد: أكثر من 10,000 صوت، أرصدة شهرية لا تنتهي، استعمال واحد لكل رمز."},
+{name:"Adobe Express — سنة",price:"2",period:"لمدة 12 شهراً",img:"assets/p-adobe.webp",desc:"صمّم منشورات وفيديوهات احترافية بأدوات Adobe السريعة لمدة سنة كاملة."},
+{name:"Apple Music — 5 أشهر",price:"2",period:"لمدة 5 أشهر",img:"assets/p-music.webp",desc:"ملايين الأغاني بجودة عالية وبدون إعلانات، مع التحميل والاستماع دون اتصال لمدة 5 أشهر."},
+{name:"LinkedIn Premium — شهرين",price:"2.50",period:"لمدة شهرين",img:"assets/p-linkedin2.webp",desc:"رسائل InMail مباشرة، معرفة من شاهد ملفك، ودورات LinkedIn Learning لبناء مسارك المهني."},
+{name:"LinkedIn Premium — 3 أشهر",price:"3",period:"لمدة 3 أشهر",img:"assets/p-linkedin3.webp",desc:"نفس مزايا Premium لمدة أطول — الخيار الأذكى لمن يبني حضوره المهني بجدية."},
+{name:"Autodesk All Apps — 3 سنوات",price:"4.50",period:"لمدة 3 سنوات",img:"assets/p-autodesk.webp",desc:"جميع تطبيقات Autodesk الهندسية — AutoCAD و3ds Max وMaya وغيرها — برخصة كاملة لثلاث سنوات."},
+{name:"Autodesk Admin Panel — لوحة المشرف",price:"15",period:"3000 دعوة",img:"assets/p-autodesk-panel.webp",desc:"لوحة إدارة بـ 3000 دعوة: فعّل رخص Autodesk لزبائنك بنفسك وحقّق هامش ربحك الخاص."},
+{name:"Max — شهر",price:"5",period:"لمدة شهر",img:"assets/p-max.webp",desc:"أقوى أفلام ومسلسلات HBO الأصلية بجودة عالية وبدون إعلانات لمدة شهر كامل."},
+{name:"Crunchyroll — شهر",price:"2.50",period:"لمدة شهر",img:"assets/p-crunchy.webp",desc:"أكبر مكتبة أنمي في العالم، حلقات جديدة فور صدورها في اليابان وبدون إعلانات لمدة شهر."}
+];
+var grid = document.getElementById("grid");
+PRODUCTS.forEach(function(p, i){
+  var el = document.createElement("article");
+  el.className = "card rv";
+  el.innerHTML = '<img src="'+p.img+'" alt="'+p.name+'" loading="lazy" /><div class="card-body"><h3>'+p.name+'</h3><p>'+p.desc.split("\n")[0]+'</p><div class="foot"><div class="price"><small>'+p.period+'</small><span class="amount">'+p.price+' <i>USDT</i></span></div><span class="details">التفاصيل ←</span></div></div>';
+  el.addEventListener("click", function(){ openProduct(i); });
+  grid.appendChild(el);
+});
+function openProduct(i){
+  var p = PRODUCTS[i];
+  document.getElementById("m-img").src = p.img;
+  document.getElementById("m-img").alt = p.name;
+  document.getElementById("m-name").textContent = p.name;
+  document.getElementById("m-price").textContent = p.price;
+  document.getElementById("m-period").textContent = p.period;
+  document.getElementById("m-desc").textContent = p.desc;
+  document.getElementById("backdrop").classList.add("open");
+}
+function closeProduct(){ document.getElementById("backdrop").classList.remove("open"); }
+document.getElementById("backdrop").addEventListener("click", function(e){ if(e.target.id === "backdrop") closeProduct(); });
+document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeProduct(); });
+document.querySelectorAll(".faq-item").forEach(function(item){
+  item.querySelector(".faq-q").addEventListener("click", function(){ item.classList.toggle("open"); });
+});
+var revealEls = document.querySelectorAll(".rv");
+if("IntersectionObserver" in window){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+  }, {threshold: 0.1});
+  revealEls.forEach(function(el){ io.observe(el); });
+  setTimeout(function(){ revealEls.forEach(function(el){ el.classList.add("in"); }); }, 1600);
+} else { revealEls.forEach(function(el){ el.classList.add("in"); }); }
+</script>
+</body>
 </html>
